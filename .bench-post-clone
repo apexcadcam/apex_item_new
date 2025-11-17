@@ -6,6 +6,14 @@ cd "$(dirname "$0")/../.." || exit
 
 if [ -f "sites/apps.txt" ]; then
 	if ! grep -q "^apex_item$" sites/apps.txt; then
+		# Ensure file ends with newline before appending
+		if [ -s sites/apps.txt ]; then
+			# Remove trailing whitespace and ensure newline
+			sed -i 's/[[:space:]]*$//' sites/apps.txt
+			if [ "$(tail -c 1 sites/apps.txt)" != "" ]; then
+				echo "" >> sites/apps.txt
+			fi
+		fi
 		echo "apex_item" >> sites/apps.txt
 		echo "✅ Added apex_item to sites/apps.txt"
 	fi
