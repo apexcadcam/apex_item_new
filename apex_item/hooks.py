@@ -169,7 +169,7 @@ doc_events = {
 
 # DocType JavaScript
 doctype_js = {
-	"Item Price": "apex_item/public/js/item_price_form.js",
+	"Item Price": "public/js/item_price_form.js",
 }
 
 # Scheduled Tasks
