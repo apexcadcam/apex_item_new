@@ -1,0 +1,20 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include apex_item *.css
+recursive-include apex_item *.csv
+recursive-include apex_item *.html
+recursive-include apex_item *.ico
+recursive-include apex_item *.js
+recursive-include apex_item *.json
+recursive-include apex_item *.md
+recursive-include apex_item *.png
+recursive-include apex_item *.py
+recursive-include apex_item *.svg
+recursive-include apex_item *.txt
+recursive-exclude apex_item *.pyc
+
+
